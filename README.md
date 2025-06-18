@@ -134,7 +134,7 @@ This section analyzes the performance of each neural network training instance u
 
 <pre> ### How to Use This Repository Follow these steps to set up, run, and experiment with the models in this project. 
  
-   1. Clone the Repository ```bash git clone https://github.com/your-username/your-repo-name.git cd your-repo-name ``` 
+   1. Clone the Repository ```bash git clone https://https://github.com/nellyiya/EarlyDetect-.git cd EarlyDetect ``` 
    2. Install Dependencies Make sure you have Python 3.8+ installed, then install the required libraries: ```bash pip install -r requirements.txt ``` Or manually install: ```bash pip install numpy pandas scikit-learn matplotlib seaborn tensorflow ``` 
  3. Project Structure ``` ├── Notebook.ipynb # Main Jupyter notebook with training and evaluation ├── saved_models/ # Trained neural network models (.h5 files) ├── data/ # Dataset files (if applicable) ├── requirements.txt # Required Python packages └── README.md # Documentation ```
  4. Run the Notebook Open the notebook and run all cells: ```bash jupyter notebook Notebook.ipynb ``` You can view the training process, compare different neural network instances, and see evaluation results including accuracy, precision, recall, and F1-score.
