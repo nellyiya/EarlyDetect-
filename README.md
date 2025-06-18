@@ -7,17 +7,16 @@ Breast cancer diagnosis is challenging and requires accurate early detection to 
 
 ### 📁 Dataset Description
 
-* **Source:** [Breast Cancer Dataset – DrivenData](https://https://www.kaggle.com/datasets/abhinavmangalore/breast-cancer-dataset-wisconsin-diagnostic-uci/)
+* **Source:** [Breast Cancer Dataset](https://www.kaggle.com/datasets/abhinavmangalore/breast-cancer-dataset-wisconsin-diagnostic-uci)
 * **Features:**
-id,diagnosis,radius_mean,texture_mean,perimeter_mean,area_mean,smoothness_mean,compactness_mean,concavity_mean,concave points_mean,symmetry_mean,fractal_dimension_mean,radius_se,texture_se,perimeter_se,area_se,smoothness_se,compactness_se,concavity_se,concave points_se,symmetry_se,fractal_dimension_se,radius_worst,texture_worst,perimeter_worst,area_worst,smoothness_worst,compactness_worst,concavity_worst,concave points_worst,symmetry_worst,fractal_dimension_worst
-
-* **Target:** Potability (0 = Not Safe, 1 = Safe)NO
+id, diagnosis, radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_mean, compactness_mean, concavity_mean, concave points_mean, symmetry_mean, fractal_dimension_mean, radius_se, texture_se, perimeter_se, area_se, smoothness_se, compactness_se, concavity_se, concave points_se, symmetry_se, fractal_dimension_se, radius_worst, texture_worst, perimeter_worst, area_worst, smoothness_worst, compactness_worst, concavity_worst, concave points_worst, symmetry_worst, fractal_dimension_worst
+* **Target:** Diagnosis (M = Malignant, B = Benign)
 
 #### ✅ Why This Dataset is Aligned
 
-* Not a generic Kaggle dataset.
-* Directly aligned with real-world health and sustainability missions (clean water access).
-* Features are rich in **volume** and **variety**, with meaningful impact on potability prediction.
+* Not a generic dataset; specific to breast cancer diagnosis.
+* Directly aligned with real-world healthcare missions focusing on early cancer detection.
+* Features are rich in clinical variety and volume, enabling robust model training and impactful medical insights.
 
 ---
 
