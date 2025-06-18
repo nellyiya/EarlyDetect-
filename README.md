@@ -1,9 +1,7 @@
 
 ## 🔍 Project Overview (EarlyDetect )
 
-Breast cancer is one of the most common cancers among women globally. Early detection greatly increases the chances of successful treatment. This project uses a public dataset to classify breast cancer as malignant or benign based on various cell characteristics.
-
-Our goal was to build and compare different machine learning models and deep learning approaches, while incorporating multiple optimization techniques to improve accuracy and reliability.
+Breast cancer diagnosis is challenging and requires accurate early detection to improve patient outcomes. This project develops a machine learning model to classify tumors as malignant or benign using clinical data. The dataset contains key features from breast cancer patients to train and evaluate the model. The goal is to support faster and more reliable diagnosis through automated prediction. This solution aims to assist healthcare professionals in making informed decisions efficiently and improving patient care.
 
 ---
 
