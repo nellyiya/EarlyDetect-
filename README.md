@@ -5,10 +5,6 @@ Breast cancer diagnosis is challenging and requires accurate early detection to 
 
 ---
 
-
-
----
-
 ### 📁 Dataset Description
 
 * **Source:** [Breast Cancer Dataset – DrivenData](https://https://www.kaggle.com/datasets/abhinavmangalore/breast-cancer-dataset-wisconsin-diagnostic-uci/)
