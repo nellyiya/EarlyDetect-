@@ -56,13 +56,17 @@ id, diagnosis, radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_
 ###  Optimization Results Table
 ###  Training Instances Summary
 
-| Training Instance | Optimizer | Regularizer | Epochs | Early Stopping | Layers         | Learning Rate | Accuracy | F1 Score | Recall  | Precision |
-|-------------------|-----------|-------------|--------|----------------|----------------|----------------|----------|----------|---------|-----------|
-| Instance 1        | Adam      | None        | 5      | No             | 1              | 0.001          | 0.7807   | 0.8447   | 0.9444  | 0.7640    |
-| Instance 2        | Adam      | L2          | 30     | Yes            | 2              | 0.001          | 0.8684   | 0.8936   | 0.8750  | 0.9130    |
-| Instance 3        | RMSprop   | L1          | 30     | Yes            | 2              | 0.0005         | 0.9123   | 0.9306   | 0.9306  | 0.9306    |
-| Instance 4        | Adam      | None        | 50     | Yes            | 3              | 0.0001         | 0.8421   | 0.8846   | 0.9583  | 0.8214    |
-</pre>
+### 🧠 Training Instances Summary
+
+| Instance    | Optimizer | Regularizer | Epochs | Early Stopping | Layers | Learning Rate | Accuracy | F1 Score | Recall  | Precision |
+|-------------|-----------|-------------|--------|----------------|--------|----------------|----------|----------|---------|-----------|
+| Instance 1  | Adam      | None        | 5      | Yes            | 1      | 0.001          | 0.7368   | 0.8148   | 0.9167  | 0.7333    |
+| Instance 2  | Adam      | L2          | 30     | Yes            | 2      | 0.001          | 0.8684   | 0.8966   | 0.9028  | 0.8904    |
+| Instance 3  | RMSprop   | L1          | 30     | Yes            | 2      | 0.0005         | 0.9035   | 0.9272   | 0.9722  | 0.8861    |
+| Instance 4  | Adam      | None        | 50     | Yes            | 3      | 0.0001         | 0.8421   | 0.8875   | 0.9861  | 0.8068    |
+
+
+
 
 
 
@@ -78,59 +82,53 @@ This section analyzes the performance of each neural network training instance u
 
 ---
 
-####  Instance 1 – Baseline Model  
-- Setup: 1 hidden layer, 5 epochs, no regularization, no early stopping  
+### Summary of Training Instances
+
+#### Instance 1 – Baseline Model  
+- Setup: 1 hidden layer, trained for 5 epochs using Adam, with no regularization, and early stopping  
+- Learning Rate: 0.001  
 - Performance:  
-  - Accuracy: 0.7807  
-  - F1 Score: 0.8447  
-  - Recall: 0.9444  
-  - Precision: 0.7640  
-- Analysis: The model underfits due to low capacity and short training time. High recall suggests it captures most positives, but low precision reveals many false positives. Loss remained relatively high due to lack of generalization.
+  - Accuracy: 0.7368  
+  - F1 Score: 0.8148  
+  - Recall: 0.9167  
+  - Precision: 0.7333  
+- Interpretation: The model underfits due to low complexity and short training time. It catches most positive cases (high recall), but misclassifies many negatives (low precision).  
 
 ---
 
-####  Instance 2 – L2 Regularized  
-- Setup: 2 layers, L2 regularization, 30 epochs, early stopping  
+#### Instance 2 – Regularized Adam  
+- Setup: 2 layers, trained for 30 epochs with L2 regularization, Adam optimizer, and early stopping  
+- Learning Rate: 0.001  
 - Performance:  
   - Accuracy: 0.8684  
-  - F1 Score: 0.8936  
-  - Recall: 0.8750  
-  - Precision: 0.9130  
-- Analysis: L2 regularization penalized over-complex weights, helping generalization. Early stopping prevented overtraining. The model balanced all metrics well with a low loss plateau early in training.
+  - F1 Score: 0.8966  
+  - Recall: 0.9028  
+  - Precision: 0.8904  
+- Interpretation: Balanced and strong performance. L2 regularization and early stopping reduced overfitting and improved generalization.  
 
 ---
 
-####  Instance 3 – Best Performer (L1 + RMSprop)  
-- Setup: 2 layers, L1 regularization, RMSprop optimizer, 30 epochs  
+#### Instance 3 – Best Model (RMSprop + L1)  
+- Setup: 2 layers, trained for 30 epochs using RMSprop, L1 regularization, and early stopping  
+- Learning Rate: 0.0005  
 - Performance:  
-  -Accuracy: 0.9123  
-  - F1 Score: 0.9306  
-  - Recall: 0.9306  
-  - Precision: 0.9306  
-- Analysis: L1 regularization created sparse weights, improving generalization. RMSprop's adaptive learning rate stabilized noisy updates. All metrics were optimal and loss was minimized effectively.
+  - Accuracy: 0.9035  
+  - F1 Score: 0.9272  
+  - Recall: 0.9722  
+  - Precision: 0.8861  
+- Interpretation: This is the top-performing model. Sparse weights from L1 and adaptive learning from RMSprop produced high accuracy and recall with stable training.  
 
 ---
 
-####  Instance 4 – Deep Model, No Regularization  
-- Setup: 3 layers, 50 epochs, very low learning rate (0.0001), no regularization  
+#### Instance 4 – Deep Model Without Regularization  
+- Setup: 3 layers, trained for 50 epochs using Adam, with no regularization, early stopping, and a very small learning rate  
+- Learning Rate: 0.0001  
 - Performance:  
   - Accuracy: 0.8421  
-  - F1 Score: 0.8846  
-  - Recall: 0.9583  
-  - Precision: 0.8214  
-- Analysis: The model focused heavily on positives, resulting in high recall but lower precision. The absence of regularization led to overfitting. Despite early stopping, slow convergence and high false positives raised loss.
-
----
-
-###  Overall Insight
-
-- L2 regularization (Instance 2) improved balance and stability.
-- L1 + RMSprop** (Instance 3) gave best performance through sparsity and adaptive learning.
-- Lack of regularization** (Instance 4) caused overfitting and reduced precision.
-- Early stopping** was effective across optimized models.
-- Loss behavior** correlated strongly with generalization—minimized loss aligned with stronger precision and accuracy.
-
-</pre>
+  - F1 Score: 0.8875  
+  - Recall: 0.9861  
+  - Precision: 0.8068  
+- Interpretation: The deeper network and long training improved recall greatly but hurt precision due to overfitting. Lack of regularization caused more false positives.  
 
 ---
 
