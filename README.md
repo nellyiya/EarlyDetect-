@@ -18,45 +18,9 @@ id, diagnosis, radius_mean, texture_mean, perimeter_mean, area_mean, smoothness_
 * Directly aligned with real-world healthcare missions focusing on early cancer detection.
 * Features are rich in clinical variety and volume, enabling robust model training and impactful medical insights.
 
----
+--_
 
-###  Model Implementations
-
-####  Model 1: Classical ML Models (Tuned)
-
-* **Algorithms Used:** Logistic Regression, Support Vector Machine (SVM)
-* **Tuning Performed:**
-
-  * **SVM:** `C`, `kernel`, `gamma`
-  * **Logistic Regression:** `C`, `solver`
-* **Evaluation:** Accuracy, Precision, Recall, F1-score
-
-####  Model 2: Simple Neural Network (No Optimization)
-
-* Baseline model with:
-
-  * No optimizer definition
-  * No regularization
-  * No early stopping
-  * Default parameters
-* Purpose: Benchmark performance
-
-####  Model 3: Optimized Neural Networks
-
-* 5 configurations using:
-
-  * **Optimizers:** Adam, SGD, RMSprop
-  * **Regularization:** Dropout (0.2–0.5)
-  * **Learning Rate:** Tuned (0.01, 0.001, 0.0005)
-  * **Early Stopping:** Enabled in selected instances
-  * **Architecture:** Up to 3 hidden layers
-
----
-
-###  Optimization Results Table
-###  Training Instances Summary
-
-### 🧠 Training Instances Summary
+### Training Instances Summary
 
 
 
