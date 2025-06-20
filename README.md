@@ -3,6 +3,11 @@
 
 Breast cancer diagnosis is challenging and requires accurate early detection to improve patient outcomes. This project develops a machine learning model to classify tumors as malignant or benign using clinical data. The dataset contains key features from breast cancer patients to train and evaluate the model. The goal is to support faster and more reliable diagnosis through automated prediction. This solution aims to assist healthcare professionals in making informed decisions efficiently and improving patient care.
 
+## Video Presentation
+
+[Watch on YouTube](https://www.youtube.com/watch?v=Oe7xDG0S6W4)
+
+
 ---
 
 ###  Dataset Description
